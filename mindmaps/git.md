@@ -1,15 +1,28 @@
 # git
 
-## Iniciar un repositorio local
+## Iniciar un repositorio local 
 
 - git init
 
-## Añadir archivos al  stage
+## Añadir archivos a stage
 
-- git add `<archivo>`
+- git add `<archivo>` 
 - git add .
-## Subir al repositorio loccal, ( confirmar cambios)
+
+## Confirmar cambios (hacer un commit)
 
 - git commit -m "mensaje"
 
+## Clonar un repositorio
+
+- git clone `<url>`
+
 ## Subir a github
+
+- gh repo create 
+
+
+## Loguear en github
+
+- gh auth login
+    - iniciamos con HTTPS
