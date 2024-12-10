@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      input{
+        background-color: greenyellow;
+        display: block;
+      }
+    </style>
+</head>
+<body>
+  <p>hola</p>
+  <p>Adiós</p>
+  <h2>hola</h2>
+  <form onchange="accion()">
+   <input type = "button" value="hola">
+   <input type = "color"></input>
+   <input type = "month"></input>
+   <input type = "text" placeholder="usuario" id="inputTexto">
+   <input type = "password" placeholder="contraseña">
+   <input type = "checkbox"></input>
+   <input type = "date"></input>
+   /* Cosas pa poner dentro
+   </form>
+   <div id = "contenedor">
+
+   </div>
+   <script>
+     function accion(){
+        console.log("El usuario cambio algo")
+        const inputTexto = document.querySelector("#inputTexto")
+        const valor = inputTexto.value
+        const contenedor = document.querySelector("#contenedor")
+        const pTexto = document.createElement("p")
+        pTexto.innerText = valor
+        contenedor.appendChild(pTexto)
+     }
+   </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1337</title>
+    <style>
+        *{
+            
+            background: green;
+        }
+        
+        #marcadorPuntos{
+            color:white;
+            background: chocolate;
+        }
+        button{
+            color: white;
+            background: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <p id = "marcadorPuntos">100</p>
+    <button id = "puntico">Click</button>
+
+    <script>
+        let puntos = 0; // "const" no porque va a cambiar y no puede ser constante
+        const marcadorPuntos = document.getElementById("marcadorPuntos");
+        //crear constante y buscar el id marcadorPuntos
+        marcadorPuntos.innerText = puntos;
+        //Escribir puntos en marcadorPuntos
+        const botonSumar = document.querySelector("#puntico");
+        console.log(botonSumar)
+        //function actualizarMarcador() {
+        //    puntos++; // Sumar un punto
+        //    marcadorPuntos.innerText = puntos; // Actualizar el texto en el marcador
+        //}
+        botonSumar.addEventListener("click", sumarPuntos)//AL CLICKAR (si pones sumarPuntos()solo se ejecutará uan vez)
+        function sumarPuntos() {
+            puntos ++;
+            marcadorPuntos.innerText = puntos; // actualizar
+        }
+       </script>
+</body>
+
+</html>

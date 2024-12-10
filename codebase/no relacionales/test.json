@@ -1,0 +1,15 @@
+{
+    "usuarios" : [
+        {
+            "nombre" : "pepe",
+            "edad" : 53,
+            "email" : "pepe@gmail.com"           
+        },
+
+        {
+            "nombre" : "maria",
+            "edad" : 17,
+            "email" : "maria@gmail.com"
+        }
+    ]
+}
