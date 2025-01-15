@@ -1,4 +1,3 @@
-
 fetch('https://dummyjson.com/recipes/1')
     .then(res => res.json())
     .then(data => {
@@ -14,7 +13,7 @@ fetch('https://dummyjson.com/recipes/1')
         // Dificultad
         const difficulty = data.difficulty;
         const dificultadElemento = document.createElement("p");
-        dificultadElemento.innerText = Dificultad: ${difficulty};
+        dificultadElemento.innerText = `Dificultad: ${difficulty}`;
         document.body.appendChild(dificultadElemento);
 
         // Ingredientes
@@ -40,19 +39,23 @@ fetch('https://dummyjson.com/recipes/1')
         // Imagen
         const imagenElemento = document.createElement("img");
         imagenElemento.src = data.image;
-        imagenElemento.alt = Imagen: ${nombre};
+        imagenElemento.alt = `Imagen: ${nombre}`;
         imagenElemento.style.width = "50%";
         document.body.appendChild(imagenElemento);
 
         // Tiempo de preparación
         const preparacion = data.prepTimeMinutes;
         const preparacionElemento = document.createElement("p");
-        preparacionElemento.innerText = Tiempopreparación: ${preparacion} minutos;
+        preparacionElemento.innerText = `Tiempopreparación: ${preparacion} minutos`;
         document.body.appendChild(preparacionElemento);
 
         // Tiempo de cocinado
         const tiempoCocinado = data.cookTimeMinutes;
         const tiempoCocinadoElemento = document.createElement("p");
-        tiempoCocinadoElemento.innerText = Tiempococción: ${tiempoCocinado} minutos;
+        tiempoCocinadoElemento.innerText = `Tiempococción: ${tiempoCocinado} minutos`;
         document.body.appendChild(tiempoCocinadoElemento);
     });
+
+
+
+
