@@ -1,4 +1,4 @@
-fetch('https://dummyjson.com/recipes/1')
+fetch('https://dummyjson.com/recipes/50')
     .then(res => res.json())
     .then(data => {
         console.log(data);
@@ -8,17 +8,17 @@ fetch('https://dummyjson.com/recipes/1')
         console.log(data.name);
         const h1 = document.createElement("h1");
         h1.innerText = nombre;
-        document.body.appendChild(h1); // introducir en el HTML
+        document.body.appendChild(h1); // introducir 
 
-        // Dificultad
+        // Difi
         const difficulty = data.difficulty;
         const dificultadElemento = document.createElement("p");
         dificultadElemento.innerText = `Dificultad: ${difficulty}`;
         document.body.appendChild(dificultadElemento);
 
-        // Ingredientes
+        // Ingredients
         const ingredients = data.ingredients;
-        const ingredientesElemento = document.createElement("ul"); // lista desordenada
+        const ingredientesElemento = document.createElement("ul"); // lista
         document.body.appendChild(ingredientesElemento);
         for (let i = 0; i < ingredients.length; i++) {
             const item = document.createElement("li");
@@ -28,7 +28,7 @@ fetch('https://dummyjson.com/recipes/1')
 
         // Pasos
         const instructions = data.instructions;
-        const instruccionesElemento = document.createElement("ol"); // lista ordenada
+        const instruccionesElemento = document.createElement("ol"); // lista2
         document.body.appendChild(instruccionesElemento);
         for (let i = 0; i < instructions.length; i++) {
             const item = document.createElement("li");
@@ -36,20 +36,20 @@ fetch('https://dummyjson.com/recipes/1')
             instruccionesElemento.appendChild(item);
         }
 
-        // Imagen
+        // Img
         const imagenElemento = document.createElement("img");
         imagenElemento.src = data.image;
         imagenElemento.alt = `Imagen: ${nombre}`;
         imagenElemento.style.width = "50%";
         document.body.appendChild(imagenElemento);
 
-        // Tiempo de preparación
+        // Time
         const preparacion = data.prepTimeMinutes;
         const preparacionElemento = document.createElement("p");
         preparacionElemento.innerText = `Tiempopreparación: ${preparacion} minutos`;
         document.body.appendChild(preparacionElemento);
 
-        // Tiempo de cocinado
+        // Time2
         const tiempoCocinado = data.cookTimeMinutes;
         const tiempoCocinadoElemento = document.createElement("p");
         tiempoCocinadoElemento.innerText = `Tiempococción: ${tiempoCocinado} minutos`;
