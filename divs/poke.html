@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        const promesaFetch =fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+        const promesaJSON = promesaFetch.then(data=> data.json())
+        promesaJSON.then(console.log(pokemon))
+        */
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+        .then(data=>data.json())
+        .then(pokemons => {
+            console.log(pokemons)        
+           const pokemons = data.pokemons;
+           const pokemonsElemento = document.createElement("ul"); // lista
+           document.body.appendChild(pokemonsElemento);
+           for (let i = 0; i < pokemons.length; i++) {
+               const item = document.createElement("li");
+               item.innerText = pokemons[i];
+               pokemonsElemento.appendChild(item);
+        }
+        })
+
+        
+    </script>
+</body>
+</html>
