@@ -6,25 +6,45 @@
     <title>Document</title>
 </head>
 <body>
+    <ul></ul>
+    <img src = "imagen">
     <script>
         /*
         const promesaFetch =fetch("https://pokeapi.co/api/v2/pokemon/ditto")
         const promesaJSON = promesaFetch.then(data=> data.json())
         promesaJSON.then(console.log(pokemon))
         */
+       
+       const lista = document.querySelector("ul")
         fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
         .then(data=>data.json())
         .then(pokemons => {
             console.log(pokemons)        
-           const pokemons = data.pokemons;
-           const pokemonsElemento = document.createElement("ul"); // lista
-           document.body.appendChild(pokemonsElemento);
-           for (let i = 0; i < pokemons.length; i++) {
-               const item = document.createElement("li");
-               item.innerText = pokemons[i];
-               pokemonsElemento.appendChild(item);
-        }
+            const listaPokemon = pokemons.results;
+            for (let i = 0; i < listaPokemon.length; i++) {              
+               const nombrePokemon = listaPokemon[i].name
+               const elementoNombre = document.createElement("li")
+               elementoNombre.innerText = nombrePokemon
+               lista.appendChild(elementoNombre)
+               const url =listaPokemon[i].url
+               fetch(url)
+               .then(data=>data.json())
+               .then(pokemon=> {
+                //console.log(pokemon)
+                //console.log(Object.keys(pokemon))
+                const sprites = pokemon.sprites
+                //console.log (sprites)
+                //console.log(Object.keys(sprites))
+                const sprite = sprites.front_default              
+                console.log (sprite)
+                const imagen = document.createElement("img")
+                imagen.src = sprite
+                })
+
+            }
+
         })
+        const imagenes = document.querySelector("img")
 
         
     </script>
