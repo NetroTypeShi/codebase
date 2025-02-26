@@ -1,0 +1,1 @@
+sqlite3 users.db "SELECT * FROM $1";
