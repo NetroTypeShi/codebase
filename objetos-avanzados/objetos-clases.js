@@ -19,7 +19,7 @@ const usuario = {
 }
 
 */
-console.log(usuario);
+
 /**
  console.log(usuario.nombre);
  console.log(usuario['nombre']);

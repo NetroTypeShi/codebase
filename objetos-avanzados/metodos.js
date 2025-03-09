@@ -9,21 +9,21 @@ console.log("hola".charCodeAt(1)) //111
 
 
 /*
-console.log("pollita".startsWith('h')) //true
-console.log("pollita".endsWith('a')) //true
-console.log("pollita".includes('pishula')) //true
-console.log("pollita".includes('o')) //true
+console.log("hola".startsWith('h')) //true
+console.log("hola".endsWith('a')) //true
+console.log("hola".includes('pishula')) //true
+console.log("hola".includes('o')) //true
 console.log("pololo".indexOf('o')) //1
-console.log("pollita".slice(1, 3)) //ol
+console.log("hola".slice(1, 3)) //ol
 console.log("bomboklat".lastIndexOf('o')) //2
 console.log("hola".length) //4
 console.log("hola".toUpperCase()) //HOLA
 console.log("hola".toLowerCase()) //hola
-console.log("pollita".replace('o', '0')) //h0la
-console.log("pollita".replace(/o/g, '0')) //h0la
-console.log("pollita".split('')[0]) //hola
-console.log("pollita".split('')) //["h", "o", "l", "a"]
-console.log("pollita".split('o')) //["h", "la"]
+console.log("hola".replace('o', '0')) //h0la
+console.log("hola".replace(/o/g, '0')) //h0la
+console.log("hola".split('')[0]) //hola
+console.log("hola".split('')) //["h", "o", "l", "a"]
+console.log("hola".split('o')) //["h", "la"]
 
 console.log("hola".repeat(3)) //holaholahola
 console.log("hola".split('').reverse().join('')) //aloh
